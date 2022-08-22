@@ -1,0 +1,23 @@
+.lists-inner-wrapper{
+    // text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.list-item{
+    // margin-bottom: 10px;
+    background-color: #fbfefe;
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto 10px auto;
+    min-height: 50px;
+    padding: 10px;
+
+    .userid{
+        color: rgb(27, 66, 172);
+    }
+
+    .title{
+        margin-top: 10px;
+    }
+}

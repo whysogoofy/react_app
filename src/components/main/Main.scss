@@ -1,0 +1,33 @@
+.nav-wrapper{
+    display: flex;
+    border-bottom: 5px solid rgb(27, 66, 172);
+    padding-top: 10px;
+    margin-left: 10px;
+
+    .posts-wrapper{
+        padding: 5px 10px 5px 10px;
+        border-top-left-radius: 8px;
+        cursor: pointer;
+        background-color: #efffff;
+    }
+    .posts-wrapper.active{
+        background-color: #9fdaec;
+        color: rgb(27, 66, 172);
+    }
+    .comments-wrapper{
+        padding: 5px 10px 5px 10px;
+        border-top-right-radius: 8px;
+        cursor: pointer;
+        background-color: #efffff;
+    }
+
+    .comments-wrapper.active{
+        background-color: #9fdaec;
+        color: rgb(27, 66, 172);
+    }
+}
+
+.lists-wrapper{
+    padding-top: 10px;
+    padding-left: 10px;
+}
