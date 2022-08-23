@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {
     BrowserRouter as Router,
@@ -12,25 +12,32 @@ import {
   import './comments.scss'
 
 
-function Posts(props) {
+function Comments(props) {
     const dispatch = useDispatch()
     const commentsdata = useSelector(state => state.action2key.data[0] || [])
-    const location = useLocation();
+    const [count, setcount] = useState(0)
 
     const fetchcomments = async () => {
         const response = await axios.get("https://jsonplaceholder.typicode.com/comments").catch((err) => console.log("error", err))
         dispatch(action2(response.data))
     } 
 
+    const handleScroll = () => {
+      let userScrollHeight = window.innerHeight + window.scrollY;
+      let windowBottomHeight = document.querySelector('.lists-wrapper').offsetHeight;
+      if (userScrollHeight >= windowBottomHeight) {
+          setcount(prevcount => prevcount+1)
+      }
+    };
+
     useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
         fetchcomments()
     }, []) 
 
-    console.log('dekho', commentsdata)
-
     return (
         <div className="lists-inner-wrapper">
-        {commentsdata.map(d => {
+        {commentsdata.slice(0, 20 + 20*count).map(d => {
             return(
             <div className="list-item">
                 <div className="id-wrapper">
@@ -45,4 +52,4 @@ function Posts(props) {
     );
   }
   
-export default Posts
+export default Comments

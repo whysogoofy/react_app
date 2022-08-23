@@ -1,6 +1,6 @@
 .nav-wrapper{
     display: flex;
-    border-bottom: 5px solid rgb(27, 66, 172);
+    // border-bottom: 5px solid rgb(27, 66, 172);
     padding-top: 10px;
     margin-left: 10px;
 
@@ -31,3 +31,27 @@
     padding-top: 10px;
     padding-left: 10px;
 }
+
+@media only screen and (min-width: 1024px) {
+    .nav-wrapper{
+        border-bottom: 5px solid rgb(27, 66, 172);
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .nav-wrapper{
+        border-bottom: 5px solid rgb(27, 66, 172);
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .nav-wrapper{
+        justify-content: center;
+        .comments-wrapper{
+            border-bottom-right-radius: 8px;
+        }
+        .posts-wrapper{
+            border-bottom-left-radius: 8px;
+        }
+    }
+  }
