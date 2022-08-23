@@ -4,7 +4,7 @@ import {
     Routes,
     Route,
   } from "react-router-dom";
-  import Main from "./components/main";
+  import Main from "./components/main/main";
 
 export function App() {
 

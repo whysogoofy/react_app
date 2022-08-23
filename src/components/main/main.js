@@ -6,10 +6,10 @@ import {
     useNavigate
   } from "react-router-dom";
   import { withRouter } from '../../withRouter'
-  import Comments from "../comments";
-  import Posts from "../posts";
+  import Comments from "../comments/comments";
+  import Posts from "../posts/posts";
   // import './Main.scss';
-  import './Main.scss'
+  import './main.scss'
 
 class Main extends React.Component {
     constructor(props) {
